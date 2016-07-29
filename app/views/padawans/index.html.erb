@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th colspan="3"></th>
     </tr>
@@ -13,7 +14,8 @@
   <tbody>
     <% @padawans.each do |padawan| %>
       <tr>
-        <td><%= padawan.name %></td>
+        <td><%= padawan.id %></td>
+        <th><%= padawan.name %></th>
         <td><%= link_to 'Show', padawan %></td>
         <td><%= link_to 'Edit', edit_padawan_path(padawan) %></td>
         <td><%= link_to 'Destroy', padawan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
