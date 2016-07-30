@@ -1,4 +1,5 @@
 class PadawansController < ApplicationController
+  http_basic_authenticate_with name: "rod", password: "secret", except: [:index, :show]
   before_action :set_padawan, only: [:show, :edit, :update, :destroy]
 
   # GET /padawans

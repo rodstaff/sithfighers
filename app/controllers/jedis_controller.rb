@@ -1,4 +1,5 @@
 class JedisController < ApplicationController
+  http_basic_authenticate_with name: "rod", password: "secret", except: [:index, :show]
   before_action :set_jedi, only: [:show, :edit, :update, :destroy]
 
   # GET /jedis
