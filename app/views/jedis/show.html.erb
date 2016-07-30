@@ -4,6 +4,16 @@
   <strong>Name:</strong>
   <%= @jedi.name %>
 </p>
+<p>
+  <strong>ID:</strong>
+  <%= @jedi.id %>
+</p>
+<p>
+  <strong>Padawans:</strong>
+  <% @jedi.padawans.each do |padawan| %>
+  <%= padawan.name %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_jedi_path(@jedi) %> |
 <%= link_to 'Back', jedis_path %>
