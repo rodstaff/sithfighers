@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root :to => 'apprenticeships#index'
+  root :to => 'jedis#index'
   
   resources :apprenticeships
   resources :padawans
